@@ -1,6 +1,10 @@
 # CodeAlong_PythonSimplified
 Coding along with Python Simplified YouTube videos
+
 https://www.youtube.com/@PythonSimplified
+
+## Functions
+https://youtu.be/aftw0WX4oCc
 
 ## OOP Classes and Objects
 https://youtu.be/f0TrMH9s-VE
