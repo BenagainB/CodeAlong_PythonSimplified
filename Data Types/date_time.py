@@ -1,7 +1,6 @@
 # date_time.py
 
-from datetime import date
-from datetime import datetime
+from datetime import date, datetime, time
 
 today = date.today()
 print("today is:", today)   # today is: 2023-04-07
@@ -30,4 +29,19 @@ print(NikolaTesla.weekday())    # 3 [which represents Thursday as where 0 = Mond
 
 now = datetime.now()
 print("right now it's:", now)   # right now it's: 2023-04-07 23:03:18.915554
+print("it's the {}th minute of the {}th hour of the {}th day of the {}th month".format(
+    now.minute,
+    now.hour,
+    now.day,
+    now.month
+))
+    # it's the 7th minute of the 23th hour of the 7th day of the 4th month
+
+chernobyl = datetime.fromisoformat("1986-04-26 01:23:40:000+04:00")
+print("the nuclear disaster in Chernobyl occurred on:", chernobyl)
+    # the nuclear disaster in Chernobyl occurred on: 1986-04-26 01:23:40+04:00
+print(chernobyl.strftime("The Chernobyl disaster occurred on %A %B %dth, %Y at %X MSD(%Z)"))
+    # The Chernobyl disaster occurred on Saturday April 26th, 1986 at 01:23:40 MSD(UTC+04:00)
+print("MSD is actually:", chernobyl.tzinfo)
+    # MSD is actually: UTC+04:00
 
