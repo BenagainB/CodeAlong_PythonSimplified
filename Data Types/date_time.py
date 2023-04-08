@@ -45,3 +45,12 @@ print(chernobyl.strftime("The Chernobyl disaster occurred on %A %B %dth, %Y at %
 print("MSD is actually:", chernobyl.tzinfo)
     # MSD is actually: UTC+04:00
 
+my_time = time(15, 33, 8)
+print(my_time)  # 15:33:08
+my_time = time.fromisoformat("15:33:08-07:00")
+print(my_time)  # 15:33:08-07:00
+print(my_time.strftime("%I:%M %p")) # 03:33 PM
+
+my_date = date(2022, 5, 22)
+my_bday = datetime.combine(my_date, my_time)
+print(my_bday)  # 2022-05-22 15:33:08-07:00
