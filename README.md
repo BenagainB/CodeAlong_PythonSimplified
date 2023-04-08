@@ -3,6 +3,12 @@ Coding along with Python Simplified YouTube videos
 
 https://www.youtube.com/@PythonSimplified
 
+## Data Types
+
+### Datetime
+
+https://youtu.be/-AlFiS74aQg
+
 ## Functions
 
 ### Basic Functions
@@ -12,6 +18,7 @@ https://youtu.be/aftw0WX4oCc
 ### Recursion Functions
 
 https://youtu.be/m1Fjdnj_Mds
+
 
 
 ## OOP Classes and Objects
