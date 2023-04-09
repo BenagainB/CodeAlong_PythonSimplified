@@ -1,6 +1,8 @@
 # variables_and_data_types.py
 
-# 8 basic data types
+# 8 basic data types:
+# Integer, Float, String, Boolean
+# Tuple, List, Set, Dictionary
 
 # Numeric data types: integer and float
 
@@ -47,3 +49,27 @@ print( a + b)
 print(a * 2)
 print(b * 5)
 
+# boolean
+
+my_boolean = (3 < 6)
+print(my_boolean)
+my_boolean = (3 > 6)
+print(my_boolean)
+my_boolean = (3 == 6)
+print(my_boolean)
+my_boolean = (3 != 6)
+print(my_boolean)
+my_boolean = (3 <= 6)
+print(my_boolean)
+
+# tuple
+# 1920,1080
+
+# list
+# ["Bob", "Sandy"]
+
+# set
+# set([1,2,"Bob"])
+
+# dictionary
+# {"name" : "Bob"}
