@@ -36,3 +36,14 @@ print("I have a", pet, "\nhis name is", pet_name, "\nand he is", pet_age, "years
 
 my_pet = "my " + pet + "'s name is " + pet_name
 print(my_pet)
+
+my_pet2 = "I have a {}, his name is {} and he is {} years old".format(pet, pet_name, pet_age)
+print(my_pet2)
+
+a = "coffee"
+b = "sugar"
+
+print( a + b)
+print(a * 2)
+print(b * 5)
+
