@@ -5,6 +5,8 @@ https://www.youtube.com/@PythonSimplified
 
 ## Data Types
 
+https://youtu.be/xUhPxj8if0U
+
 ### Datetime
 
 https://youtu.be/-AlFiS74aQg
