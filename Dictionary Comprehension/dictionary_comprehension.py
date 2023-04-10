@@ -1,6 +1,8 @@
 # dictionary_comprehension.py
 """ Dictionary Comprehension - Create Complex Data Structures Step by Step """
 
+import random
+
 # Create dictionaries from: lists, tuples, dataframes
 
 # Modify dictionaries in place
@@ -47,3 +49,14 @@ my_dict = {(key+"man" if key != "Spider" else "Superman") :
            (val if val != "photographer" else "reporter")
            for (key, val) in my_dict.items()}
 print(my_dict)
+
+# DNA example
+bases = ["A", "T", "C", "G"]
+strand1 = random.choices(bases, k=10)
+print("DNA example")
+print("strand1:",strand1)
+dna = {key:
+       [val, ("T" if val == "A" else "A" if val == "T" else "G" if val == "C" else "C")]
+       for (key, val) in enumerate(strand1)}
+print("DNA:", dna)
+
