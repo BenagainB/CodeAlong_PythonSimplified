@@ -1,4 +1,4 @@
-# rules_of_naming_variables
+# rules_of_naming_variables.py
 """The Rules of Naming Variables in Python"""
 
 # 1. variable names cannot start with a number
@@ -48,8 +48,8 @@ reserved_keywords = ["and", "as", "assert", "break", "class", "continue", "def",
 for word in reserved_keywords:
     print(word)
 
-type = 8
-print(type)
+# type = 8
+# print(type)
 # 8
 
 # while 'type' is not an official reserved keyword (as seen above), it introduces errors in some cases

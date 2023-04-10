@@ -15,6 +15,7 @@ https://youtu.be/3YUfWCjCcko
 
 https://youtu.be/-AlFiS74aQg
 
+
 ## Functions
 
 ### Basic Functions
@@ -25,11 +26,14 @@ https://youtu.be/aftw0WX4oCc
 
 https://youtu.be/m1Fjdnj_Mds
 
+
 ## List Comprehension
 
+https://youtu.be/SNq4C988FjU
 
 
-# Dictionary Comprehension
+## Dictionary Comprehension
+
 
 
 ## OOP Classes and Objects
