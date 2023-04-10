@@ -34,8 +34,16 @@ for_loop_range(names, profs)
 
 # modify dictionary in place
 my_dict = {
-    "spider": "photographer",
+    "Spider": "photographer",
     "Bat": "philanthropist",
     "Wonder Wo": "nurse"
 }
+print("modify dictionary in place")
+print(my_dict)
+# my_dict = {key+"man" : val for (key, val) in my_dict.items()}
+# my_dict = {(key+"man" if key != "Spider" else "Superman") : val
+#            for (key, val) in my_dict.items()}
+my_dict = {(key+"man" if key != "Spider" else "Superman") :
+           (val if val != "photographer" else "reporter")
+           for (key, val) in my_dict.items()}
 print(my_dict)
