@@ -2,6 +2,7 @@
 """ Dictionary Comprehension - Create Complex Data Structures Step by Step """
 
 import random
+import string
 
 # Create dictionaries from: lists, tuples, dataframes
 
@@ -60,3 +61,19 @@ dna = {key:
        for (key, val) in enumerate(strand1)}
 print("DNA:", dna)
 
+# user authentication example
+keys = ["id", "username", "password"]
+users = ["mariyasha888", "KnotABot"]
+
+def generate_random_password(length):
+    " generates a random password from A-Z, a-z, 0-9, and special characters"
+    password = "".join(random.choices(string.printable, k=length))
+    return password
+
+data = [{
+    key:
+    (i if key == "id" else users[i] if key == "username" else generate_random_password(8)) for key in keys} for i in range(len(users))]
+print("User authentication example:", data)
+
+# list and dictionary comprehension disadvantages:
+# 1. less easily readable, 2. easy to introduce errors vs loops
