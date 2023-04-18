@@ -99,16 +99,40 @@ data["bmi"] = bmi
 # print(gta_data)
 
 ## Head and Tail Methods
-
+# print(data.head())  # print first 5 rows, but could also pass variable number into head
+# print(data.tail())  # print last 5 rows, but could also pass variable number into tail
 
 ## Filter Data Entries
-
+# filtered_row = data[ data["name"] == "Batman" ]
+# print(filtered_row)
+#      name  height  weight        bmi
+# 1  Batman     1.9     100  27.700831
 
 ## Replace Data Entries
-
+# replaced_name = data.replace("Batman", "Superman")
+# print(replaced_name)
+#         name  height  weight        bmi
+# 0     Mariya    1.67      54  19.362473
+# 1   Superman    1.90     100  27.700831
+# 2  Spongebob    0.25       1  16.000000
 
 ## Remove Columns
+# remove_column = data.drop("bmi", axis=1)
+# print(remove_column)
+#         name  height  weight
+# 0     Mariya    1.67      54
+# 1     Batman    1.90     100
+# 2  Spongebob    0.25       1
 
+# remove_columns = data.drop(["weight", "bmi"], axis=1)
+# print(remove_columns)
+#         name  height
+# 0     Mariya    1.67
+# 1     Batman    1.90
+# 2  Spongebob    0.25
+
+remove_row = data.iloc[1:4] # omits 0 row, but keeps row 1-4
+print(remove_row)
 
 ## Add New Rows to Data Frame
 
