@@ -135,6 +135,23 @@ remove_row = data.iloc[1:4] # omits 0 row, but keeps row 1-4
 print(remove_row)
 
 ## Add New Rows to Data Frame
-
+row = {"name": "Marvell",
+       "height": 2.0,
+       "weight": 110}
+new_row_data = data.append(row, ignore_index = True)
+print(new_row_data)
 
 ## Remove Duplicates
+row = {"name": "Black Adam",
+       "height": 2.0,
+       "weight": 110}
+new_row_data = new_row_data.append(row, ignore_index = True)
+print(new_row_data)
+
+scrubbed_data = new_row_data.drop_duplicates()  # removes exact duplicates
+print(scrubbed_data)
+
+scrubbed_data = new_row_data.drop_duplicates( subset = ["bmi"])
+print(scrubbed_data)
+
+print("number of entries:", len(scrubbed_data))
