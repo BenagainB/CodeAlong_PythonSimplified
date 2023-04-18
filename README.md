@@ -45,6 +45,13 @@ https://youtu.be/f0TrMH9s-VE
 https://youtu.be/6c6NYPjO_rI
 
 
+## Libraries
+
+### pandas
+
+https://youtu.be/zN2Hua6oII0
+
+
 ## Test-Driven Development
 
 https://youtu.be/ibVSPVz2LAA
