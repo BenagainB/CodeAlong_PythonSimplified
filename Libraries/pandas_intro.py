@@ -25,7 +25,7 @@ column = ["Mariya", "Batman", "Spongebob"]
 ## Add new Columns
 titled_columns = {"name": column,
                   "height": [1.67, 1.9, 0.25],
-                  "weight": [54, 100, 10]}
+                  "weight": [54, 100, 1]}
 
 data = pd.DataFrame(titled_columns)
 # print(data)
@@ -55,9 +55,23 @@ select_column = data["weight"][1]
 # Name: 1, dtype: object
 
 select_row = data.iloc[1]["weight"]
-print(select_row)
+# print(select_row)
 # 100
 
 ## Manipulate Data
 bmi = []
 # bmi (Body Mass Index) = weight/(height**2)
+for i in range(len(data)):
+    bmi_score = data["weight"][i]/(data["height"][i]**2)
+    bmi.append(bmi_score)
+
+data["bmi"] = bmi
+
+print(data)
+#         name  height  weight         bmi
+# 0     Mariya    1.67      54   19.362473
+# 1     Batman    1.90     100   27.700831
+# 2  Spongebob    0.25      10  160.000000
+
+## Save dataframe to csv
+data.to_csv("bmi.csv")

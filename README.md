@@ -47,7 +47,7 @@ https://youtu.be/6c6NYPjO_rI
 
 ## Libraries
 
-### pandas
+### Basic Guide to Pandas
 
 https://youtu.be/zN2Hua6oII0
 
