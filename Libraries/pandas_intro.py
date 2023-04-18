@@ -75,7 +75,7 @@ data["bmi"] = bmi
 # 2  Spongebob    0.25      10  160.000000
 
 ## Save dataframe to csv
-data.to_csv("bmi.csv", index=False)
+# data.to_csv("bmi.csv", index=False)
 # ,name,height,weight,bmi
 # 0,Mariya,1.67,54,19.362472659471475
 # 1,Batman,1.9,100,27.70083102493075
@@ -89,12 +89,14 @@ data.to_csv("bmi.csv", index=False)
 # 2	Spongebob	0.25	1	16.0
 
 ## Load Data Frame from File
-data = pd.read_csv("bmi.csv")
+# data = pd.read_csv("bmi.csv")
 # pd.read_csv("bmi.csv", sep="\t")
-print(data)
+# print(data)
 
 ## Load SQL database to Data Frame
-
+# connection = sqlite3.connect("gta.db")  # passing name of database
+# gta_data = pd.read_sql("select * from gta", connection)    # gta is name of table, not database
+# print(gta_data)
 
 ## Head and Tail Methods
 
