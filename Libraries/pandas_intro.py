@@ -1,5 +1,6 @@
 """ pandas_intro.py """
 import pandas as pd
+import sqlite3
 
 column = ["Mariya", "Batman", "Spongebob"]
 # print(column)
@@ -67,11 +68,47 @@ for i in range(len(data)):
 
 data["bmi"] = bmi
 
-print(data)
+# print(data)
 #         name  height  weight         bmi
 # 0     Mariya    1.67      54   19.362473
 # 1     Batman    1.90     100   27.700831
 # 2  Spongebob    0.25      10  160.000000
 
 ## Save dataframe to csv
-data.to_csv("bmi.csv")
+data.to_csv("bmi.csv", index=False)
+# ,name,height,weight,bmi
+# 0,Mariya,1.67,54,19.362472659471475
+# 1,Batman,1.9,100,27.70083102493075
+# 2,Spongebob,0.25,1,16.0
+
+## comma delimited vs tab delimited
+# data.to_csv("bmi.csv", index=False, sep="\t")  # can also save as "bmi.txt"
+# name	height	weight	bmi
+# 0	Mariya	1.67	54	19.362472659471475
+# 1	Batman	1.9	100	27.70083102493075
+# 2	Spongebob	0.25	1	16.0
+
+## Load Data Frame from File
+data = pd.read_csv("bmi.csv")
+# pd.read_csv("bmi.csv", sep="\t")
+print(data)
+
+## Load SQL database to Data Frame
+
+
+## Head and Tail Methods
+
+
+## Filter Data Entries
+
+
+## Replace Data Entries
+
+
+## Remove Columns
+
+
+## Add New Rows to Data Frame
+
+
+## Remove Duplicates
