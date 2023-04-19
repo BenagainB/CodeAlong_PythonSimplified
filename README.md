@@ -51,6 +51,10 @@ https://youtu.be/6c6NYPjO_rI
 
 https://youtu.be/zN2Hua6oII0
 
+### SQLite Backend for Beginners
+
+https://youtu.be/Ohj-CqALrwk
+
 
 ## Test-Driven Development
 
