@@ -21,8 +21,6 @@ release_list = [
     (2008, "Grand Theft Auto IV", "Liberty City"),
 ]
 
-# connection.close()
-
 
 ## SQL Cursor Object
 cursor = connection.cursor()
@@ -36,5 +34,28 @@ cursor.executemany("insert into gta values (?,?,?)", release_list)
 ## Select and print database rows
 for row in cursor.execute("select * from gta"):
     print(row)
+print("")
+
+
+## Print filtered rows
+cursor.execute("select * from gta where city=:c", {"c":"Liberty City"})
+gta_search = cursor.fetchall()
+print(gta_search)
+print("")
+
+
+## Combine tables
+cursor.execute("create table cities (gta_city text, real_city text)")
+cursor.execute("insert into cities values (?,?)", ("Liberty City", "New York City"))
+cursor.execute("select * from cities where gta_city=:c", {"c":"Liberty City"})
+cities_search = cursor.fetchall()
+print(cities_search)
+print("")
+
+
+## Manipulate database data
+for i in gta_search:
+    adjusted = [cities_search[0][1] if value==cities_search[0][0] else value for value in i]
+    print(adjusted)
 
 connection.close()
