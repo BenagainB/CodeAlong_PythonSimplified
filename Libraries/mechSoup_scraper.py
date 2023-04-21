@@ -56,7 +56,7 @@ for idx, key in enumerate(column_names):
     dictionary[key] = columns[idx:][::11]
 
 df = pd.DataFrame(data = dictionary)
-print(df.head())
+# print(df.head())
 #    Distribution               Founder  ...  Cost  Status
 # 0     AlmaLinux  AlmaLinux Foundation  ...  None  Active
 # 1  Alpine Linux     Alpine Linux Team  ...  None  Active
@@ -65,7 +65,7 @@ print(df.head())
 # 4      ArchBang    Willensky Aristide  ...  None  Active
 # [5 rows x 12 columns]
 
-print(df.tail())
+# print(df.tail())
 #     Distribution                  Founder  ...                                               Cost    Status
 # 93  Webconverger               Kai Hendry  ...                                         Commercial  Inactive
 # 94       Xandros     Xandros Incorporated  ...                                         Commercial  Inactive
@@ -73,3 +73,15 @@ print(df.tail())
 # 96       Zenwalk  Jean-Philippe Guillemin  ...                                               None    Active
 # 97      Zorin OS              Zorin Group  ...  Zorin OS Lite & Core are free, while Business ...    Active
 # [5 rows x 12 columns]
+
+# insert data into a database
+connection = sqlite3.connect("linux_distro.db")
+cursor = connection.cursor()
+
+cursor.execute("create table linux (Distribution, " + ",".join(column_names) + ")")
+for i in range(len(df)):
+    cursor.execute("insert into linux values (?,?,?,?,?,?,?,?,?,?,?,?)", df.iloc[i])
+
+connection.commit() # persist save to database
+
+connection.close()
