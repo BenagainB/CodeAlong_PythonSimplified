@@ -55,6 +55,10 @@ https://youtu.be/zN2Hua6oII0
 
 https://youtu.be/Ohj-CqALrwk
 
+### Web Scraping Databases with Mechanical Soup and SQlite
+
+https://youtu.be/MkGQmZoMuRM
+
 
 ## Test-Driven Development
 
