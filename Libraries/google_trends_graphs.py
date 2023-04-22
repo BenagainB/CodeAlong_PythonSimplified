@@ -16,7 +16,7 @@ pytrends.build_payload(keywords, timeframe='today 5-y')
 # specify and get data
 data = pytrends.interest_over_time()
     # represents weekly data regarding number of searches for each keyword
-print(data)
+# print(data)
 #             Python   R  C++  Java  HTML  isPartial
 # date
 # 2018-04-22      22  57   74    28    14      False
@@ -37,7 +37,7 @@ print(data)
 # <class 'pandas.core.frame.DataFrame'>
 
 # plot data
-plt.plot(data)
+#plt.plot(data)
 
 # add titles
 plt.suptitle('Programming Language Searches on Google')
@@ -48,6 +48,14 @@ plt.ylabel('weekly searches')
 plt.legend(keywords, loc='upper left')
 
 # save graph
-plt.savefig('google_trends_graph.png')
+# plt.savefig('google_trends_graph.png')
 
+# plt.show()
+
+# analyze data
+focus = ['Python', 'R'] # refine search to 2 keywords
+
+plt.plot(data[focus])
+plt.legend(focus)
+# plt.savefig('google_trends_Python_vs_R.png')
 plt.show()
