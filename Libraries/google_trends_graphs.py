@@ -1,7 +1,7 @@
 # google_trends_graphs.py
 """ Plotting Google Trends Graphs with Matplotlib & Pandas """
 
-import matplotlib
+import matplotlib.pyplot as plt
 # import pytrends
 from pytrends.request import TrendReq
 
@@ -32,3 +32,22 @@ print(data)
 # 2023-04-16      32  47   89    22    13       True
 
 # [261 rows x 6 columns]
+
+# print(type(data))
+# <class 'pandas.core.frame.DataFrame'>
+
+# plot data
+plt.plot(data)
+
+# add titles
+plt.suptitle('Programming Language Searches on Google')
+plt.xlabel('years')
+plt.ylabel('weekly searches')
+
+# add legend
+plt.legend(keywords, loc='upper left')
+
+# save graph
+plt.savefig('google_trends_graph.png')
+
+plt.show()
