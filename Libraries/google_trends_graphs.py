@@ -4,6 +4,7 @@
 import matplotlib.pyplot as plt
 # import pytrends
 from pytrends.request import TrendReq
+import pandas as pd
 
 # create a pytrends object. request data from Google Trends
 pytrends = TrendReq(hl = 'en-US')   # hl is host language
@@ -100,3 +101,13 @@ data2 = data2.to_frame()
 
 # print(type(data2))
 # <class 'pandas.core.frame.DataFrame'>
+
+# plot bar chart with PANDAS
+# data2.plot(kind='bar')
+# plt.show()
+
+#plot a bar chart with multiple keywords
+data3 = pytrends.interest_by_region(resolution='COUNTRY', inc_low_vol=True)
+data3 = data3[55:60]
+data3.plot(kind='bar')
+plt.show()
