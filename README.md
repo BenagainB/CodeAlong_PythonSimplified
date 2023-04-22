@@ -59,6 +59,10 @@ https://youtu.be/Ohj-CqALrwk
 
 https://youtu.be/MkGQmZoMuRM
 
+### Plotting Google Trends Graphs with Matplotlib & Pandas
+
+https://youtu.be/MJ1945J_W0c
+
 
 ## Test-Driven Development
 
